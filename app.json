@@ -20,6 +20,12 @@
     "web": {
       "bundler": "metro"
     },
-    "scheme": "appcatalogo"
+    "scheme": "appcatalogo",
+    "extra": {
+      "eas": {
+        "projectId": "edc6500d-cc5c-420d-a10e-ff7ca7c673ec"
+      }
+    },
+    "owner": "osvaldocruz"
   }
 }
