@@ -26,6 +26,12 @@
         "projectId": "edc6500d-cc5c-420d-a10e-ff7ca7c673ec"
       }
     },
-    "owner": "osvaldocruz"
+    "owner": "osvaldocruz",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/edc6500d-cc5c-420d-a10e-ff7ca7c673ec"
+    }
   }
 }

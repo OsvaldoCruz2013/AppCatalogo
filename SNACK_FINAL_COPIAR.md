@@ -1,33 +1,40 @@
-# 🚀 COPIAR TUDO PARA O SNACK - SDK 51
+# 🚀 SNACK - TP2 - DESENVOLVIMENTO MOBILE COM REACT NATIVE
 
-## ⚠️ IMPORTANTE ANTES DE COMEÇAR:
-
-1. Acesse: https://snack.expo.dev
-2. Faça login com @osvaldocruz
-3. Crie um NOVO Snack
-4. Delete TODOS os arquivos que vierem por padrão (App.js, components/, etc)
-5. Copie os 6 arquivos abaixo EXATAMENTE como estão
+**URL do seu Snack:** https://snack.expo.dev/@osvaldocruz/desenvolvimento_mobile_com_react_native_tp2
 
 ---
 
-## 📄 ARQUIVO 1: package.json
+## 📋 PASSO A PASSO RÁPIDO
 
-**Caminho:** `package.json` (raiz do projeto)
+1. **Acesse:** https://snack.expo.dev
+2. **Faça login** com conta @osvaldocruz
+3. **Crie um novo Snack** (ou edite um existente)
+4. **Renomeie** o projeto para: `desenvolvimento_mobile_com_react_native_tp2`
+5. **Delete** o arquivo `App.js` (se existir)
+6. **Copie** cada arquivo abaixo (total: 6 arquivos)
+7. **Clique em Save**
+8. **Pronto!** ✅
+
+---
+
+## 📄 1. package.json
+
+**Caminho:** `package.json` (na raiz)
 
 ```json
 {
   "dependencies": {
-    "expo-router": "~3.5.23",
-    "expo-status-bar": "~1.12.1",
-    "react-native-safe-area-context": "4.10.5",
-    "react-native-screens": "~3.31.1"
+    "expo-router": "~6.0.23",
+    "expo-status-bar": "~3.0.9",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0"
   }
 }
 ```
 
 ---
 
-## 📄 ARQUIVO 2: app/\_layout.tsx
+## 📄 2. app/\_layout.tsx
 
 **Caminho:** `app/_layout.tsx`
 
@@ -47,7 +54,7 @@ export default function RootLayout() {
 
 ---
 
-## 📄 ARQUIVO 3: app/index.tsx
+## 📄 3. app/index.tsx
 
 **Caminho:** `app/index.tsx`
 
@@ -61,7 +68,7 @@ export default function Index() {
 
 ---
 
-## 📄 ARQUIVO 4: data/products.ts
+## 📄 4. data/products.ts
 
 **Caminho:** `data/products.ts`
 
@@ -188,7 +195,7 @@ export const products: Product[] = [
 
 ---
 
-## 📄 ARQUIVO 5: app/list.tsx
+## 📄 5. app/list.tsx
 
 **Caminho:** `app/list.tsx`
 
@@ -368,7 +375,7 @@ const styles = StyleSheet.create({
 
 ---
 
-## 📄 ARQUIVO 6: app/detail.tsx
+## 📄 6. app/detail.tsx
 
 **Caminho:** `app/detail.tsx`
 
@@ -705,22 +712,22 @@ const styles = StyleSheet.create({
 
 ## ✅ CHECKLIST FINAL
 
-Depois de copiar todos os arquivos:
+Antes de salvar, verifique:
 
-- [ ] Deletou App.js do Snack
-- [ ] Copiou os 6 arquivos na ordem
-- [ ] Verificou que package.json tem apenas 4 dependências
-- [ ] Clicou em "Save" no Snack
-- [ ] Aguardou recarregar (15 segundos)
-- [ ] Testou em "Web" no preview
-- [ ] Renomeou o projeto para: `desenvolvimento_mobile_com_react_native_tp2`
+- [ ] Deletou o arquivo `App.js` (se existir)
+- [ ] O `package.json` tem APENAS as 4 dependências (versões SDK 54)
+- [ ] Criou a pasta `app` com 4 arquivos (.tsx)
+- [ ] Criou a pasta `data` com 1 arquivo (.ts)
+- [ ] Todos os arquivos foram colados completamente
+- [ ] Clicou em "Save"
+- [ ] O nome do projeto é: `desenvolvimento_mobile_com_react_native_tp2`
 
 ---
 
-## 🎯 LINK FINAL
+## 🎯 LINK FINAL PARA ENTREGAR
 
-Após salvar, seu link será:
+Após salvar, o link será:
 
-https://snack.expo.dev/@osvaldocruz/desenvolvimento_mobile_com_react_native_tp2
+**https://snack.expo.dev/@osvaldocruz/desenvolvimento_mobile_com_react_native_tp2**
 
-**Este é o link que você vai entregar no TP2!** ✅
+✅ **Este é o link que você vai colar no TP2!**

@@ -25,6 +25,7 @@ https://snack.expo.dev/@osvaldocruz/desenvolvimento_mobile_com_react_native_tp2
 ```
 
 **Como copiar:**
+
 1. Copie o URL completo da barra de endereço do navegador
 2. **OU** clique no ícone de compartilhar (🔗) no Snack
 
@@ -33,6 +34,7 @@ https://snack.expo.dev/@osvaldocruz/desenvolvimento_mobile_com_react_native_tp2
 ## 📝 PASSO 3: TESTAR ANTES DE ENTREGAR
 
 ### No Android/iOS (Expo Go):
+
 1. Clique em "Continue" no popup do desenvolvedor
 2. Aguarde carregar (10-15 segundos)
 3. Deve aparecer: **"🛍️ Produtos em Destaque"**
@@ -41,11 +43,13 @@ https://snack.expo.dev/@osvaldocruz/desenvolvimento_mobile_com_react_native_tp2
 6. Teste o botão **"Adicionar ao Carrinho"** → deve mostrar um alerta
 
 ### Na Web (Preview):
+
 1. Clique em **"Web"** no topo da tela
 2. Aguarde carregar no preview à direita
 3. Teste a mesma navegação acima
 
 **Se aparecer tela em branco:**
+
 - Pressione Ctrl+M (Android) ou Cmd+D (iOS)
 - Selecione "Reload"
 - Ou troque entre Android/iOS/Web
@@ -86,6 +90,7 @@ Certifique-se que o Snack tem APENAS estes arquivos:
 6. ✅ `data/products.ts` (7 produtos)
 
 **DELETAR se existir:**
+
 - ❌ `App.js` (ou deixar vazio)
 - ❌ `components/` (pasta)
 - ❌ `AssetExample.js`
@@ -104,7 +109,7 @@ Seu aplicativo está completo e funcional:
 ✅ useLocalSearchParams() para receber dados  
 ✅ 7 produtos (mínimo: 5)  
 ✅ Tema roxo consistente  
-✅ SafeAreaView e StatusBar configurados  
+✅ SafeAreaView e StatusBar configurados
 
 **Este Snack atende a TODOS os requisitos do TP2!** 🚀
 
@@ -113,6 +118,7 @@ Seu aplicativo está completo e funcional:
 ## 📞 SUPORTE
 
 Se o Snack não carregar ou der erro:
+
 1. Verifique se está logado como @osvaldocruz
 2. Confirme que o package.json tem apenas 4 dependências
 3. Delete todos os arquivos extras
