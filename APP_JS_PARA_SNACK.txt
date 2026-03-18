@@ -1,4 +1,0 @@
-// COPIE E COLE ESTE CÓDIGO NO App.js DO SNACK
-// (Substitua todo o conteúdo do App.js por este código)
-
-export { default } from 'expo-router/entry';
