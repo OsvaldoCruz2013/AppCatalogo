@@ -21,17 +21,17 @@
       "bundler": "metro"
     },
     "scheme": "appcatalogo",
+    "owner": "osvaldocruz",
     "extra": {
       "eas": {
-        "projectId": "edc6500d-cc5c-420d-a10e-ff7ca7c673ec"
+        "projectId": "a10637e4-b1db-4504-bdd7-7f5a7db4d86b"
       }
     },
-    "owner": "osvaldocruz",
     "runtimeVersion": {
       "policy": "appVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/edc6500d-cc5c-420d-a10e-ff7ca7c673ec"
+      "url": "https://u.expo.dev/a10637e4-b1db-4504-bdd7-7f5a7db4d86b"
     }
   }
 }

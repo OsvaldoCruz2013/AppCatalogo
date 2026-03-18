@@ -1,35 +1,85 @@
-# Conteúdo Completo para Copiar no Snack
+# 📱 GUIA COMPLETO - SNACK SDK 54
 
-## 1. package.json
+## ⚠️ IMPORTANTE: Use as versões SDK 54 (atualizado!)
+
+Este guia foi atualizado com as versões corretas para o Snack SDK 54.
+
+## ✅ PASSO A PASSO
+
+### 1. Abrir o Snack
+
+- Acesse: https://snack.expo.dev/@osvaldocruz/desenvolvimento_mobile_com_react_native_tp2
+- Faça login se necessário
+
+### 2. Configurar o arquivo App.js
+
+⚠️ **IMPORTANTE:** O Snack cria um arquivo `App.js` por padrão. Com Expo Router, este arquivo precisa redirecionar para o entry do Expo Router.
+
+1. Clique em `App.js`
+2. **APAGUE TODO O CONTEÚDO**
+3. Cole **EXATAMENTE** este código:
+
+```js
+export { default } from "expo-router/entry";
+```
+
+**Isso é essencial!** Sem este export, você verá o erro: "No default export of 'App.js' to render!"
+
+### 3. Criar Estrutura de Pastas
+
+Clique no ícone "+" ao lado de "PROJECT" e crie:
+
+- Pasta: `app`
+- Pasta: `data`
+
+### 4. Copiar package.json PRIMEIRO (MUITO IMPORTANTE!)
+
+**Clique em `package.json` e SUBSTITUA TODO O CONTEÚDO por:**
 
 ```json
 {
   "dependencies": {
-    "expo-router": "~3.4.0",
-    "expo-status-bar": "~1.11.1",
-    "react-native-safe-area-context": "4.8.2",
-    "react-native-screens": "~3.29.0"
+    "expo-router": "~3.5.23",
+    "react-native-safe-area-context": "4.10.5",
+    "react-native-screens": "~3.31.1",
+    "expo-linking": "~6.3.1",
+    "expo-constants": "~16.0.1",
+    "expo-status-bar": "~1.12.1"
   }
 }
 ```
 
-## 2. app/\_layout.tsx
+**⚠️ IMPORTANTE: Use exatamente essas versões no Snack!**
+
+⚠️ **AGUARDE 15-20 SEGUNDOS** após salvar para as dependências instalarem!
+
+---
+
+### 5. Criar app/\_layout.tsx
+
+Dentro da pasta `app`, crie o arquivo `_layout.tsx`:
 
 ```tsx
 import { Stack } from "expo-router";
 
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="list" options={{ headerShown: false }} />
-      <Stack.Screen name="detail" options={{ headerShown: false }} />
-    </Stack>
+    <>
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="list" options={{ headerShown: false }} />
+        <Stack.Screen name="detail" options={{ headerShown: false }} />
+      </Stack>
+    </>
   );
 }
 ```
 
-## 3. app/index.tsx
+---
+
+### 6. Criar app/index.tsx
+
+Dentro da pasta `app`, crie o arquivo `index.tsx`:
 
 ```tsx
 import { Redirect } from "expo-router";
@@ -39,130 +89,11 @@ export default function Index() {
 }
 ```
 
-## 4. data/products.ts
+---
 
-```typescript
-export interface Product {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  category: string;
-  rating: number;
-  features: string[];
-}
+### 7. Criar app/list.tsx
 
-export const products: Product[] = [
-  {
-    id: "1",
-    title: "Smartphone Galaxy X Pro",
-    description:
-      "Smartphone de última geração com tela AMOLED de 6.7 polegadas",
-    price: 3499.9,
-    category: "Smartphones",
-    rating: 4.8,
-    features: [
-      'Tela AMOLED 6.7" 120Hz',
-      "Câmera tripla 108MP",
-      "12GB RAM + 256GB",
-      "Bateria 5000mAh",
-      "5G",
-    ],
-  },
-  {
-    id: "2",
-    title: "Notebook UltraBook Pro",
-    description: "Notebook leve e potente para trabalho e entretenimento",
-    price: 5299.9,
-    category: "Notebooks",
-    rating: 4.9,
-    features: [
-      "Intel Core i7 13ª geração",
-      "16GB RAM DDR5",
-      "SSD 512GB NVMe",
-      'Tela 15.6" Full HD',
-      "Peso: 1.5kg",
-    ],
-  },
-  {
-    id: "3",
-    title: "Fone de Ouvido Bluetooth Premium",
-    description: "Fone com cancelamento de ruído ativo e som de alta qualidade",
-    price: 899.9,
-    category: "Áudio",
-    rating: 4.7,
-    features: [
-      "Cancelamento de ruído ativo",
-      "Bateria até 30 horas",
-      "Bluetooth 5.3",
-      "Confortável para uso prolongado",
-      "Resistente à água IPX4",
-    ],
-  },
-  {
-    id: "4",
-    title: "Smartwatch Fitness Plus",
-    description: "Relógio inteligente com monitoramento completo de saúde",
-    price: 1299.9,
-    category: "Wearables",
-    rating: 4.6,
-    features: [
-      "Monitor cardíaco 24h",
-      "GPS integrado",
-      "Resistente à água 5ATM",
-      "Bateria 7 dias",
-      "Mais de 100 modos esportivos",
-    ],
-  },
-  {
-    id: "5",
-    title: 'Tablet Pro 12.9"',
-    description: "Tablet profissional com caneta stylus e teclado opcional",
-    price: 4199.9,
-    category: "Tablets",
-    rating: 4.9,
-    features: [
-      'Tela Liquid Retina 12.9"',
-      "Processador M2",
-      "8GB RAM + 128GB",
-      "Suporte para Apple Pencil",
-      "Face ID",
-    ],
-  },
-  {
-    id: "6",
-    title: "Câmera Mirrorless 4K",
-    description: "Câmera profissional para fotografia e vídeo em 4K",
-    price: 6799.9,
-    category: "Câmeras",
-    rating: 4.8,
-    features: [
-      "Sensor CMOS 24MP",
-      "Vídeo 4K 60fps",
-      "Estabilização de 5 eixos",
-      "Wi-Fi e Bluetooth",
-      "Visor eletrônico OLED",
-    ],
-  },
-  {
-    id: "7",
-    title: "Console de Videogame NextGen",
-    description: "Console de última geração com gráficos em 4K e ray tracing",
-    price: 3999.9,
-    category: "Games",
-    rating: 4.9,
-    features: [
-      "Gráficos 4K a 120fps",
-      "Ray Tracing em tempo real",
-      "SSD ultra-rápido 1TB",
-      "Compatível com jogos anteriores",
-      "Controle sem fio incluído",
-    ],
-  },
-];
-```
-
-## 5. app/list.tsx
+Dentro da pasta `app`, crie o arquivo `list.tsx`:
 
 ```tsx
 import React from "react";
@@ -173,13 +104,14 @@ import {
   FlatList,
   TouchableOpacity,
   StatusBar,
-  SafeAreaView,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
 import { products, Product } from "../data/products";
 
 export default function ListScreen() {
   const handleItemPress = (item: Product) => {
+    // Navegar para a tela de detalhes passando todos os dados do produto
     router.push({
       pathname: "/detail",
       params: {
@@ -338,7 +270,11 @@ const styles = StyleSheet.create({
 });
 ```
 
-## 6. app/detail.tsx
+---
+
+### 8. Criar app/detail.tsx
+
+Dentro da pasta `app`, crie o arquivo `detail.tsx`:
 
 ```tsx
 import React from "react";
@@ -349,20 +285,25 @@ import {
   ScrollView,
   StatusBar,
   TouchableOpacity,
-  SafeAreaView,
   Alert,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, router } from "expo-router";
 
 export default function DetailScreen() {
+  // Receber os parâmetros passados pela navegação
   const params = useLocalSearchParams();
+
   const { id, title, description, price, category, rating, features } = params;
+
+  // Parse das features que foram enviadas como JSON string
   const featuresList = features ? JSON.parse(features as string) : [];
 
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar barStyle="light-content" backgroundColor="#6200ee" />
 
+      {/* Header customizado com botão voltar */}
       <View style={styles.customHeader}>
         <TouchableOpacity
           onPress={() => router.back()}
@@ -375,6 +316,7 @@ export default function DetailScreen() {
       </View>
 
       <ScrollView style={styles.container}>
+        {/* Header com categoria */}
         <View style={styles.header}>
           <View style={styles.categoryBadge}>
             <Text style={styles.categoryText}>{category}</Text>
@@ -385,11 +327,13 @@ export default function DetailScreen() {
           </View>
         </View>
 
+        {/* Área de imagem placeholder */}
         <View style={styles.imagePlaceholder}>
           <Text style={styles.imagePlaceholderText}>📱</Text>
           <Text style={styles.imagePlaceholderSubtext}>Imagem do Produto</Text>
         </View>
 
+        {/* Conteúdo principal */}
         <View style={styles.content}>
           <Text style={styles.title}>{title}</Text>
 
@@ -440,6 +384,7 @@ export default function DetailScreen() {
             </View>
           </View>
 
+          {/* Botões de ação */}
           <View style={styles.buttonContainer}>
             <TouchableOpacity
               style={styles.primaryButton}
@@ -669,10 +614,221 @@ const styles = StyleSheet.create({
 });
 ```
 
-## Como copiar para o Snack:
+---
 
-1. **Delete o App.js** no Snack (se ainda existir)
-2. Copie o conteúdo de cada arquivo acima
-3. Cole no arquivo correspondente no seu Snack
-4. Clique em **Save**
-5. O app deve funcionar!
+### 9. Criar data/products.ts
+
+Dentro da pasta `data`, crie o arquivo `products.ts`:
+
+```typescript
+export interface Product {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  category: string;
+  rating: number;
+  features: string[];
+}
+
+export const products: Product[] = [
+  {
+    id: "1",
+    title: "Smartphone Galaxy X Pro",
+    description:
+      "Smartphone de última geração com tela AMOLED de 6.7 polegadas",
+    price: 3499.9,
+    category: "Smartphones",
+    rating: 4.8,
+    features: [
+      'Tela AMOLED 6.7" 120Hz',
+      "Câmera tripla 108MP",
+      "12GB RAM + 256GB",
+      "Bateria 5000mAh",
+      "5G",
+    ],
+  },
+  {
+    id: "2",
+    title: "Notebook UltraBook Pro",
+    description: "Notebook leve e potente para trabalho e entretenimento",
+    price: 5299.9,
+    category: "Notebooks",
+    rating: 4.9,
+    features: [
+      "Intel Core i7 13ª geração",
+      "16GB RAM DDR5",
+      "SSD 512GB NVMe",
+      'Tela 15.6" Full HD',
+      "Peso: 1.5kg",
+    ],
+  },
+  {
+    id: "3",
+    title: "Fone de Ouvido Bluetooth Premium",
+    description: "Fone com cancelamento de ruído ativo e som de alta qualidade",
+    price: 899.9,
+    category: "Áudio",
+    rating: 4.7,
+    features: [
+      "Cancelamento de ruído ativo",
+      "Bateria até 30 horas",
+      "Bluetooth 5.3",
+      "Confortável para uso prolongado",
+      "Resistente à água IPX4",
+    ],
+  },
+  {
+    id: "4",
+    title: "Smartwatch Fitness Plus",
+    description: "Relógio inteligente com monitoramento completo de saúde",
+    price: 1299.9,
+    category: "Wearables",
+    rating: 4.6,
+    features: [
+      "Monitor cardíaco 24h",
+      "GPS integrado",
+      "Resistente à água 5ATM",
+      "Bateria 7 dias",
+      "Mais de 100 modos esportivos",
+    ],
+  },
+  {
+    id: "5",
+    title: 'Tablet Pro 12.9"',
+    description: "Tablet profissional com caneta stylus e teclado opcional",
+    price: 4199.9,
+    category: "Tablets",
+    rating: 4.9,
+    features: [
+      'Tela Liquid Retina 12.9"',
+      "Processador M2",
+      "8GB RAM + 128GB",
+      "Suporte para Apple Pencil",
+      "Face ID",
+    ],
+  },
+  {
+    id: "6",
+    title: "Câmera Mirrorless 4K",
+    description: "Câmera profissional para fotografia e vídeo em 4K",
+    price: 6799.9,
+    category: "Câmeras",
+    rating: 4.8,
+    features: [
+      "Sensor CMOS 24MP",
+      "Vídeo 4K 60fps",
+      "Estabilização de 5 eixos",
+      "Wi-Fi e Bluetooth",
+      "Visor eletrônico OLED",
+    ],
+  },
+  {
+    id: "7",
+    title: "Console de Videogame NextGen",
+    description: "Console de última geração com gráficos em 4K e ray tracing",
+    price: 3999.9,
+    category: "Games",
+    rating: 4.9,
+    features: [
+      "Resolução 4K 120fps",
+      "Ray Tracing em tempo real",
+      "SSD ultrarrápido 1TB",
+      "Controle sem fio com feedback háptico",
+      "Retrocompatibilidade",
+    ],
+  },
+];
+```
+
+---
+
+### 10. Testar no Snack
+
+Após copiar TODOS os arquivos:
+
+1. Clique em **"Save"** (Ctrl+S)
+2. Aguarde 10-15 segundos
+3. Clique em **"Web"** no painel direito
+4. Deve aparecer a lista com 7 produtos
+5. Clique em um produto para ver os detalhes
+6. Teste o botão "Voltar"
+
+### 11. Testar no Celular (Opcional)
+
+1. Instale o **Expo Go** no seu celular (Android ou iOS)
+2. No Snack, clique em **"My Device"**
+3. Escaneie o QR Code com o Expo Go
+4. O app deve funcionar normalmente
+
+---
+
+## ⚠️ SOLUÇÃO DE PROBLEMAS
+
+### Se aparecer "No default export of 'App.js' to render!":
+
+1. **É o erro mais comum!** Acontece quando o App.js está vazio ou sem export
+2. Abra o arquivo `App.js` no Snack
+3. Cole EXATAMENTE este código:
+   ```js
+   export { default } from "expo-router/entry";
+   ```
+4. Salve (Ctrl+S) e aguarde recarregar
+
+### Se aparecer erro de SafeAreaView (deprecation warning):
+
+1. Verifique se `app/list.tsx` e `app/detail.tsx` têm: `import { SafeAreaView } from "react-native-safe-area-context"`
+2. NÃO deve ter: `import { SafeAreaView } from "react-native"`
+3. Salve todos os arquivos e aguarde recarregar
+
+### Se aparecer tela em branco:
+
+1. Verifique se o `App.js` tem: `export { default } from 'expo-router/entry';`
+2. Verifique se o `package.json` tem APENAS as 4 dependências listadas
+3. Verifique se a pasta `app` tem os 4 arquivos (.tsx)
+4. Verifique se a pasta `data` tem o arquivo products.ts
+5. Clique em "Clear Cache" no menu (3 pontos)
+6. Recarregue a página
+
+### Se aparecer erro de dependências:
+
+1. Volte no `package.json`
+2. Confirme que tem EXATAMENTE as versões corretas para SDK 54:
+   - `expo-router`: ~4.0.9
+   - `expo-status-bar`: ~2.0.0
+   - `react-native-safe-area-context`: 4.12.0
+   - `react-native-screens`: ~4.3.0
+
+### Se a navegação não funcionar:
+
+1. Verifique se o arquivo `app/_layout.tsx` existe
+2. Verifique se o arquivo `app/index.tsx` existe
+3. Confirme que TODOS os nomes de arquivos estão corretos
+
+---
+
+## ✅ CHECKLIST FINAL
+
+- [ ] App.js com `export { default } from 'expo-router/entry';`
+- [ ] package.json com "main" e 4 dependências
+- [ ] Pasta `app` criada
+- [ ] Pasta `data` criada
+- [ ] app/\_layout.tsx criado
+- [ ] app/index.tsx criado
+- [ ] app/list.tsx criado (com SafeAreaView de react-native-safe-area-context)
+- [ ] app/detail.tsx criado (com SafeAreaView de react-native-safe-area-context)
+- [ ] data/products.ts criado
+- [ ] Salvou o Snack (Ctrl+S)
+- [ ] Testou na Web
+- [ ] Viu a lista de 7 produtos
+- [ ] Clicou em um produto e viu os detalhes
+- [ ] Testou o botão voltar
+
+---
+
+## 🎯 LINK FINAL
+
+Após confirmar que tudo funciona, seu Snack estará em:
+https://snack.expo.dev/@osvaldocruz/desenvolvimento_mobile_com_react_native_tp2
+
+**Use este link para entregar o TP2!**

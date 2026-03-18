@@ -6,8 +6,8 @@ import {
   FlatList,
   TouchableOpacity,
   StatusBar,
-  SafeAreaView,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
 import { products, Product } from "../data/products";
 

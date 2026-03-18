@@ -6,9 +6,9 @@ import {
   ScrollView,
   StatusBar,
   TouchableOpacity,
-  SafeAreaView,
   Alert,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams, router } from "expo-router";
 
 export default function DetailScreen() {
